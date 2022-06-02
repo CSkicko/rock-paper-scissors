@@ -1,5 +1,3 @@
-let compRandNumber;
-
 var player = {
     selection: 0, //r, p, s pick
     won: true,
@@ -18,13 +16,18 @@ if(pick=="r"){
     player.selection = 2;
 }
 
-compRandNumber = Math.trunc(Math.random() * 3);
+const compRandNumber = Math.trunc(Math.random() * 3);
 
-if (player.selection=="r" && compRandNumber=="p"){result="lose"}
-elseif( player.selection=="r" && compRandNumber=="s"){result="win"}
-elseif( player.selection=="s" && compRandNumber=="r"){result="lose"}
-elseif( player.selection=="s" && compRandNumber=="p"){result="win"}
-elseif( player.selection=="p" && compRandNumber=="s"){result="lose"}
-elseif( player.selection=="p" && compRandNumber=="r"){result="win"}
-)
-
+if (player.selection=="r" && compRandNumber=="p"){
+    result="lose";
+} elseif( player.selection=="r" && compRandNumber=="s"){
+    player.won=true;
+} elseif( player.selection=="s" && compRandNumber=="r"){
+    result="lose";
+} elseif( player.selection=="s" && compRandNumber=="p"){
+    result="win";
+} elseif( player.selection=="p" && compRandNumber=="s"){
+    result="lose";
+} elseif( player.selection=="p" && compRandNumber=="r"){
+    result="win";
+}
