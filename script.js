@@ -5,3 +5,13 @@ var player = {
     draws: 0,
     losses: 0
 }
+
+
+
+// random number between 0 and 2 for the computer
+const compRandNumber = Math.trunc(Math.random() * 3);
+
+
+
+
+
